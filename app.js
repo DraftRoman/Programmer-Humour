@@ -1,8 +1,9 @@
+const API_URL = `https://xkcd.now.sh/?comic=latest`;
 
-export async function getData() {
-    const API_URL = `https://xkcd.now.sh/?comic=latest`;
+export async function getData(API) {
+    ;
     try {
-        const response = await fetch(API_URL);
+        const response = await fetch(API);
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
